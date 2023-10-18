@@ -1,0 +1,18 @@
+.today {
+  position: fixed;
+  top: 0%;
+  right: 0;
+}
+.inputCity {
+  padding: 10px;
+  border: darkgray solid;
+  border-radius: 14px;
+  margin: 5px;
+}
+button {
+  padding: 10px;
+  border: darkgray solid;
+}
+h3 {
+  font-family: 100px;
+}
