@@ -16,3 +16,7 @@ button {
 h3 {
   font-family: 100px;
 }
+.weather-app {
+  max-width: 600px;
+  margin: 0 auto;
+}
