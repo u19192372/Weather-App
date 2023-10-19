@@ -1,7 +1,18 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
 .today {
   position: fixed;
   top: 0%;
   right: 0;
+}
+h1 {
+  color: #878787;
+  font-size: 24px;
+  height: 28px;
+  line-height: 29px;
+  text-align: left;
+  font-weight: 100;
 }
 .inputCity {
   padding: 10px;
@@ -14,9 +25,28 @@ button {
   border: darkgray solid;
 }
 h3 {
-  font-family: 100px;
+  font-weight: 100;
 }
 .weather-app {
   max-width: 600px;
-  margin: 0 auto;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #dadde1;
+  border-radius: 10px;
+}
+
+.date {
+  text-align: right;
+  color: #878787;
+}
+strong {
+  color: black;
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 400;
+}
+.units {
+  position: relative;
+  top: -30px;
+  font-size: 18px;
 }
