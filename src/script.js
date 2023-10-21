@@ -45,6 +45,10 @@ function showTemp(response) {
   let temp = Math.round(response.data.main.temp);
   let tempElement = document.querySelector("#degrees");
   let description = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
   tempElement.innerHTML = `${temp} °C`;
   description.innerHTML = response.data.weather[0].description;
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
 }

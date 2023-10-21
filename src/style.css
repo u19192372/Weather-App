@@ -50,3 +50,6 @@ strong {
   top: -30px;
   font-size: 18px;
 }
+.description {
+  text-transform: capitalize;
+}
