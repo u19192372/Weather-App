@@ -42,13 +42,16 @@ inputField.addEventListener("keydown", function (event) {
 });
 
 function showTemp(response) {
-  let temp = Math.round(response.data.main.temp);
+  let tempreture = Math.round(response.data.main.temp);
   let tempElement = document.querySelector("#degrees");
   let description = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   let iconElement = document.querySelector("#icon");
-  tempElement.innerHTML = `${temp} `;
+
+  celsiusTemp = response.data.main.temp;
+
+  tempElement.innerHTML = `${tempreture} `;
   description.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
@@ -58,3 +61,30 @@ function showTemp(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
+
+function displayFahrenheitTemp(event) {
+  event.preventDefault();
+
+  let fahrenheitTemp = (14 * 9) / 5 + 32;
+  let degreesElement = document.querySelector("#degrees");
+  degreesElement.innerHTML = Math.round(fahrenheitTemp);
+  //remove active class from celsius link
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+}
+
+function displayCelsiusTemp(event) {
+  event.preventDefault();
+  let degreesElement = document.querySelector("#degrees");
+  degreesElement.innerHTML = Math.round(celsiusTemp);
+
+  //remove active class from fahrenheit link
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+}
+let celsiusTemp = null;
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLinkLink.addEventListener("click", displayCelsiusTemp);
