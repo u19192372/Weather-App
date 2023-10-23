@@ -14,26 +14,34 @@
   </head>
 
   <body>
+    <div class="container">
     <div class="weather-app"> 
-    <h1>
-      Weather App
-    </h1>
-  <h3 id= "currentDate" class="date">  </h3>
+
+    <h1>Weather App</h1>
+  <h3 id= "currentDate" class="date"></h3>
   
 
-
-<div class="city">
-
+    <div class="col-9">
   <input
-  type="cityInput"
+  type="search"
   class="inputCity"
   placeholder=" Enter your city"
 /> 
-
 <button class="btn btn-primary"> Search </button>
-
 </div>
+
 </br> </br> 
+<div class="row">
+ <div class="col-6">
+              <div class="d-flex weather-temperature">
+                <img src="" alt="Clear" id="icon" class="float-left" />
+                <div>
+                  <strong id="temperature"></strong
+                  ><span class="units"> °C</span>
+                </div>
+              </div>
+            </div>
+<div class="col-6">
 <ul>
     <li id="cityName">Pretoria</li>
     <li id="description" class="description">Sunny</li>
@@ -41,9 +49,8 @@
     <li>Wind: <span id="wind"> </span> Km/H</li>
     <li class="degrees" id="degrees"><strong> 24</strong><small class="units"> &deg;c</small></li>
 </ul>
-
-
-
+</div>
+</div>
 
 
 <br> </br> </br>
@@ -72,10 +79,11 @@
 
   </div>
 </div>
-
-<small>
+<br>
+<small> Ivy Dube:
     <a href="https://github.com/u19192372/Weather-App" target="_blank">Open source code  </a>
 </small>
+    </div>
     </div>
     <script src="src/script.js"></script>
   </body>
