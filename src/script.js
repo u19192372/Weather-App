@@ -83,8 +83,36 @@ function displayCelsiusTemp(event) {
   fahrenheitLink.classList.remove("active");
 }
 let celsiusTemp = null;
+displayForecast();
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLinkLink.addEventListener("click", displayCelsiusTemp);
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+  <div class="col-2">
+    <div class="weather-forecast-date">
+      ${day}
+    </div>
+    <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="" width="42">
+    <div class="weather-forecast-tempretures">
+      <span class="weather-forecast-max">18&deg;</span>
+      <span class="weather-forecast-min">10&deg;</span>
+
+    </div>
+     
+  </div>
+`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
